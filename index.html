@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-173251448-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-173251448-1');
+		</script>
+
 		<!-- Required meta tags -->
-    	<meta charset="UTF-8">
-    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-    	<link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
-    	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+			crossorigin="anonymous"
+		/>
 		<!-- Bootstrap CSS -->
 		<link
 			rel="stylesheet"
@@ -97,7 +114,7 @@
 		></script>
 
 		<div class="container file-upload">
-			<div class="image-upload-wrap" style="width: 250px; margin: 0 auto; ">
+			<div class="image-upload-wrap" style="width: 250px; margin: 0 auto;">
 				<input
 					class="file-upload-input"
 					type="file"
@@ -137,7 +154,7 @@
 				data-ad-unit="DAN-qeeyd431bfhv"
 				data-ad-width="320"
 				data-ad-height="100"
-				padding= "10px"
+				padding="10px"
 			></ins>
 		</div>
 		<div class="mt-2 container d-flex justify-content-center ad-banner">
@@ -147,7 +164,7 @@
 				data-ad-unit="DAN-1jy5gkczaz0og"
 				data-ad-width="320"
 				data-ad-height="50"
-				padding: 10px;
+				padding="10px"
 			></ins>
 		</div>
 
@@ -175,7 +192,7 @@
 		></script>
 		<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
-		
+
 		<script>
 			function readURL(input) {
 				if (input.files && input.files[0]) {
@@ -250,32 +267,42 @@
 				var resultTitle, resultExplain, resultCeleb;
 				switch (prediction[0].className) {
 					case '봄 웜톤':
-						resultTitle = "봄 웜톤"
-                        resultExplain = "벚꽃과 같은 색상이 어울린다"
-                        resultCeleb = "봄 웜톤 컬러 연예인: 박보영, 송혜교, 수지, 아이유"
+						resultTitle = '봄 웜톤';
+						resultExplain = '벚꽃과 같은 색상이 어울린다';
+						resultCeleb = '봄 웜톤 컬러 연예인: 박보영, 송혜교, 수지, 아이유';
 						break;
 					case '여름 쿨톤':
-						resultTitle = "여름 쿨톤"
-                        resultExplain = "코디팁 : 시원한 색상이 어울린다"
-                        resultCeleb = "여름 쿨톤 컬러 연예인: 김연아, 아이린, 전지현, 태연";
+						resultTitle = '여름 쿨톤';
+						resultExplain = '코디팁 : 시원한 색상이 어울린다';
+						resultCeleb = '여름 쿨톤 컬러 연예인: 김연아, 아이린, 전지현, 태연';
 						break;
 					case '가을 웜톤':
-						resultTitle = "가을 웜톤톤"
-                        resultExplain = "코디팁 : blah blah"
-                        resultCeleb = "가을 웜톤 컬러 연예인: 수애, 신세경, 이성경, 이효리";
+						resultTitle = '가을 웜톤톤';
+						resultExplain = '코디팁 : blah blah';
+						resultCeleb = '가을 웜톤 컬러 연예인: 수애, 신세경, 이성경, 이효리';
 						break;
 					case '겨울 쿨톤':
-						resultTitle = "겨울 쿨톤"
-                        resultExplain = "흰눈과 색상이 어울린다"
-                        resultCeleb = "겨울 쿨톤 컬러 연예인: 김옥빈, 김혜수, 서예지, 선미";
+						resultTitle = '겨울 쿨톤';
+						resultExplain = '흰눈과 색상이 어울린다';
+						resultCeleb = '겨울 쿨톤 컬러 연예인: 김옥빈, 김혜수, 서예지, 선미';
 						break;
 					default:
 						resultMessage = '알수없음';
 				}
-            var title = "<div class='" + prediction[0].className + "-animal-title'>" + resultTitle + "</div>"
-            var explain = "<div class='animal-explain pt-2'>" + resultExplain + "</div>"
-            var celeb = "<div class='" + prediction[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
-            $('.result-message').html(title + explain + celeb);
+				var title =
+					"<div class='" +
+					prediction[0].className +
+					"-animal-title'>" +
+					resultTitle +
+					'</div>';
+				var explain = "<div class='animal-explain pt-2'>" + resultExplain + '</div>';
+				var celeb =
+					"<div class='" +
+					prediction[0].className +
+					"-animal-celeb pt-2 pb-2'>" +
+					resultCeleb +
+					'</div>';
+				$('.result-message').html(title + explain + celeb);
 				for (let i = 0; i < maxPredictions; i++) {
 					const classPrediction =
 						prediction[i].className + ': ' + prediction[i].probability.toFixed(2);
