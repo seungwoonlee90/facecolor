@@ -5,6 +5,10 @@ body {
   color: #35465d;
 }
 
+.top-banner {
+	padding: 15% 3%;
+}
+
 .file-upload {
     padding: 15% 3%;
     margin: 0 auto;
