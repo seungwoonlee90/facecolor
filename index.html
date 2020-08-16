@@ -2,9 +2,11 @@
 <html>
 	<head>
 		<!-- Required meta tags -->
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
+    	<meta charset="UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    	<link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
+    	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 		<!-- Bootstrap CSS -->
 		<link
 			rel="stylesheet"
@@ -88,14 +90,14 @@
 			<h2 class="subtitle">나의 퍼스널컬러는?</h2>
 		</section>
 
-		<div>Personal-Color Test by EthanLee</div>
+		<div style="text-align: center;">Personal-Color Test by EthanLee</div>
 		<script
 			class="jsbin"
 			src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
 		></script>
 
 		<div class="container file-upload">
-			<div class="image-upload-wrap" style="width: 70%; margin: 0 auto;">
+			<div class="image-upload-wrap" style="width: 250px; margin: 0 auto; ">
 				<input
 					class="file-upload-input"
 					type="file"
@@ -108,7 +110,9 @@
 			</div>
 			<div class="file-upload-content">
 				<img class="file-upload-image" id="face-image" src="#" alt="your image" />
-				<p class="result-message"></p>
+				<div>
+					<p class="result-message"></p>
+				</div>
 				<div id="label-container" class="d-flex flex-column justify-content-around"></div>
 				<div id="addThis" class="addthis_inline_share_toolbox_6lz1"></div>
 
@@ -133,6 +137,7 @@
 				data-ad-unit="DAN-qeeyd431bfhv"
 				data-ad-width="320"
 				data-ad-height="100"
+				padding= "10px"
 			></ins>
 		</div>
 		<div class="mt-2 container d-flex justify-content-center ad-banner">
@@ -142,6 +147,7 @@
 				data-ad-unit="DAN-1jy5gkczaz0og"
 				data-ad-width="320"
 				data-ad-height="50"
+				padding: 10px;
 			></ins>
 		</div>
 
@@ -169,6 +175,7 @@
 		></script>
 		<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+		
 		<script>
 			function readURL(input) {
 				if (input.files && input.files[0]) {
