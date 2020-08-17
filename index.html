@@ -116,6 +116,10 @@
 					<img src="img/upload.svg" class="upload" style="margin: 10px;" />
 				</div>
 			</div>
+			<p class="subtitle", style="margin: 10px;">
+				보름달을 눌러 사진을 올려주세요<br>
+				(데이터를 수집하지 않습니다)
+			</p>
 			<div class="file-upload-content">
 				<img class="file-upload-image" id="face-image" src="#" alt="your image" />
 				<div>
@@ -130,7 +134,7 @@
 					<button
 						type="button p-2"
 						class="try-again-btn"
-						onclick="gaReload1();"
+						onclick="readURL(this)"
 						data-toggle="modal"
 						data-target="#adModal"
 					>
